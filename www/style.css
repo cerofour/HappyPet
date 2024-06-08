@@ -1,179 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
 	background-color: white;
+	min-height: 100vh;
+	font-family: 'Noto Sans', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-	background-color: #2BB3ED;
-    padding: 1rem;
-	height: 75px;
+	box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(90deg, rgba(43,179,237,1) 0%, rgba(43,179,237,1) 35%, rgba(43,151,237,1) 100%); 
 }
 
-.brand-title {
-    font-size: 1.5rem;
-    color: white;
+.navbar ul {
+	padding: 20px 0;
+	list-style: none;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
-.navbar-links ul {
-    list-style: none;
+.navbar li {
+	padding: 0 10px;
+	height: 50px;
 }
 
-.navbar-links li {
-    display: inline;
-    padding: 0 1rem;
+.navbar li:first-child {
+	margin-right: auto;
 }
 
-.navbar-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
+.navbar a {
+	height: 100%;
+	padding: 0 25px;
+	text-decoration: none;
+	align-items: center;
+	display: flex;
+	color: white;
+	background-color: none;
 }
 
-.toggle-button {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 21px;
-    height: 15px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.navbar ul li a:hover {
-	background-color: white;
+.navbar a:hover {
 	color: #2BB3ED;
+	background-color: white;
+	border-radius: 20px;
 	font-weight: bold;
-	box-shadow: 0 0 0 8px #fff;
-	border-radius: 10px;
-	animation-duration: 500ms;
+	padding: 0px 25px;
+	transition: background-color 2s ease 50ms;
 }
 
-.main-content {
-	margin: 1em;
+.navbar li:first-child a {
+	margin-right: auto;
+	background-color: transparent;
+	color: white;
+	font-weight: bold;
+	font-size: x-large;
 }
 
-@media (max-width: 768px) {
-    .toggle-button {
-        display: flex;
-    }
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links ul li {
-        text-align: center;
-        padding: 0.5rem 0;
-        width: 100%;
-    }
-
-    .navbar-links.active {
-        display: flex;
-        flex-direction: column;
-    }
+.sidebar{
+	position: fixed;
+	top: 0; 
+	right: 0;
+	height: 100vh;
+	width: 250px;
+	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(12px);
+	box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+	list-style: none;
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
 }
 
-.carousel {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px;
+.sidebar li{
+  width: 100%;
 }
-
-.slides {
-    display: flex;
-    width: 400%;
-    height: 100%;
-    transition: transform 0.6s ease-in-out;
+.sidebar a{
+  width: 100%;
 }
-
-.slides input {
+.menu-button{
+  display: none;
+}
+@media(max-width: 800px){
+  .hideOnMobile{
     display: none;
+  }
+  .menu-button{
+    display: block;
+  }
 }
-
-.slide {
+@media(max-width: 400px){
+  .sidebar{
     width: 100%;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.navigation-manual {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: -40px;
-}
-
-.manual-btn {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.manual-btn:not(:last-child) {
-    margin-right: 10px;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .carousel {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .slides {
-        width: 400%;
-    }
-
-    .slide {
-        width: 100%;
-    }
-
-    .navigation-manual {
-        margin-top: -20px;
-    }
-
-    .manual-btn {
-        padding: 3px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navigation-manual {
-        margin-top: -10px;
-    }
-
-    .manual-btn {
-        padding: 2px;
-    }
+  }
 }
