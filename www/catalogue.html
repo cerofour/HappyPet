@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<title>HappyPet</title>
+	<title>HappyPet - Catalogue</title>
 </head>
 <body>
 	<nav class="navbar">
@@ -18,7 +18,7 @@
     	</ul>
 		<ul>
 			<li><a href="#">HappyPet</a></li>
-			<li class="hideOnMobile"><a href="catalogue.html">Catálogo</a></li>
+			<li class="hideOnMobile"><a href="#">Catálogo</a></li>
 			<li class="hideOnMobile"><a href="#">Ubícanos</a></li>
 			<li class="hideOnMobile"><a href="contact.html">Contacto</a></li>
 			<li class="hideOnMobile"><a href="#">Acerca de</a></li>
@@ -26,13 +26,34 @@
 		</ul>
 	</nav>
 	<h1 class="titles">HAPPY PET</h1>
-	<div class="carousel">
-		<div class="carousel-inner">
-			<img class="carousel-item" src="img/dv.png" alt="Imagen 1">
-			<img class="carousel-item" src="img/dv.png" alt="Imagen 2">
-			<img class="carousel-item" src="img/dv.png" alt="Imagen 3">
+	<h2 class="titles">PRODUCTOS</h2>
+
+	<div class="filter-elements">
+		<div class="combobox-container">
+			<label for="comboBox1">Ordenar por:</label>
+			<select class="combobox" id="combobox1">
+				<option value="opcion1" selected >Nombre</option>
+				<option value="opcion2">Precio</option>
+				<option value="opcion3">Color</option>
+			</select>
+			<label for="comboBox1">Tipo de producto:</label>
+			<select class="combobox" id="combobox2">
+				<option value="opcion1" selected >Juguetes</option>
+			</select>
+		</div>
+		<div class="search-bar">
+			<form action="/search" method="GET">
+				<input type="text" name="search" placeholder="Buscar productos...">
+			</form>
 		</div>
 	</div>
+
+	<div>
+		<p><center>AQUÍ IRÁN LOS PRODUCTOS</center></p>
+	</div>
+
+
+
 
 </body>
 
