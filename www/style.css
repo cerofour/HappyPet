@@ -183,3 +183,7 @@ body {
     width: 100%;
   }
 }
+
+.page-description {
+	margin: 50px;
+}
