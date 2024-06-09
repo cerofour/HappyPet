@@ -61,7 +61,7 @@ body {
 	font-size: x-large;
 }
 
-#title{
+.titles{
 	text-align: center;
 	font-weight: bold;
 	font-size: 3em;
@@ -89,6 +89,61 @@ body {
 	display: block;
 }
 
+.filter-elements{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #f0f0f0;
+}
+
+.combobox-container .label{
+	margin-right: 10px;
+}
+
+.combobox{
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-right: 10px
+}
+
+.search-bar{
+	flex: 1;
+	margin-left: 20px;
+	max-width: 300px;
+}
+
+.search-bar input[type="text"] {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+
+.contact-info {
+	margin: 20px auto;
+	padding: 20px;
+	max-width: 600px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+
+.contact-info h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.contact-info p {
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.contact-info strong {
+	font-weight: bold;
+}
 
 .sidebar{
 	position: fixed;
