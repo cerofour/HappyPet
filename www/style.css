@@ -61,6 +61,35 @@ body {
 	font-size: x-large;
 }
 
+#title{
+	text-align: center;
+	font-weight: bold;
+	font-size: 3em;
+	margin-top: 30px;
+}
+
+.carousel{
+	width: 50%;
+	height: auto;
+	left: 0;
+	margin-left: 10px;
+	border-radius: 15px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.carousel-inner{
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item{
+	flex: 0 0 auto;
+	min-width: 100%;
+	display: block;
+}
+
+
 .sidebar{
 	position: fixed;
 	top: 0; 
