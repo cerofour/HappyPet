@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install lftp
+        run: sudo apt install lftp
       - name: Mirror files with lftp
         run:
           lftp ${{ secrets.FTP_SERVER }} -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -e "
