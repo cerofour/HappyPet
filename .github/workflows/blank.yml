@@ -25,6 +25,6 @@ jobs:
           set ftp:ssl-force true;
           set sftp:auto-confirm yes;
           set ssl:verify-certificate true;
-          mirror -v -P 5 -R -n -L -x ^\.git/$ \"www\" \"public_html\";
+          mirror -v -P 5 -R -n -L -x ^\.git/$ /home/runner/work/HappyPet/www \"public_html\";
           quit
           "
