@@ -9,22 +9,16 @@ on:
     branches: ["master"]
 
 jobs:
-  build:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
-      - name: ftp-upload-action
-        uses: GenieTim/ftp-action@v4.0.1
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          # FTP host
-          host: ${{ secrets.FTP_SERVER }}
-          # FTP user
-          user: ${{ secrets.FTP_USERNAME }}
-          # FTP password
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Force SSL encryption
-          forceSsl: true
-          # Local directory
-          localDir: "www"
-          # Remote directory
-          remoteDir: "public_html"
