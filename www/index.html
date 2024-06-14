@@ -1,46 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/carousel.css">
-	<title>HappyPet - Página Principal</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Clínica Veterinaria HappyPet Chiclayo</title>
 </head>
 <body>
-	<nav class="navbar">
-		<ul>
-			<li><a href="#">HappyPet</a></li>
-			<li class="hideOnMobile"><a href="#">Catálogo</a></li>
-			<li class="hideOnMobile"><a href="ubicanos.html">Ubícanos</a></li>
-			<li class="hideOnMobile"><a href="#">Contacto</a></li>
-			<li class="hideOnMobile"><a href="about.html">Acerca de</a></li>
-      		<li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-		</ul>
-	</nav>
-	<div class="carousel-container">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="img/banner1.png" alt="Imagen 1">
+  <nav class="main-nav-bar">
+    <ul>
+      <li class="first-nav-element">
+		 <a href="#"> <img src="img/happypet-logo.jpg" alt="HappyPet Logo"></a>
+		 <a href="#">CLÍNICA VETERINARIA<br>HAPPYPET CHICLAYO</a></li>
+      <li class="hideOnMobile"><a href="#">CONTACTO</a></li>
+      <li class="hideOnMobile"><a href="#">UBÍCANOS</a></li>
+      <li class="hideOnMobile"><a href="#">NOSOTROS</a></li>
+    </ul>
+  </nav>
+
+  <nav class="secondary-nav-bar">
+	<ul>
+		<li><a href="#">HAPPYPET AV JUAN TOMIS</a></li>
+		<li><a href="#">HAPPYPET URB MIRAFLORES</a></li>
+		<li><a href="#">HAPPYPET COQUETOS</a></li>
+	</ul>
+  </nav>
+  
+  <div class="main-container">
+
+	<div class="img-container">
+		<div class="slideshow-container">
+
+			<!-- Full-width images with number and caption text -->
+			<div class="slide fade">
+			  <img src="img/wallhaven-3lepy9_1600x900.png" style="width:100%">
 			</div>
-			<div class="carousel-item">
-				<img src="img/banner2.png" alt="Imagen 2">
+		  
+			<div class="slide fade">
+			  <img src="img/wallhaven-rdqxmm_1600x900.png" style="width:100%">
 			</div>
-			<div class="carousel-item">
-				<img src="img/banner3.png" alt="Imagen 3">
+		  
+			<div class="slide fade">
+			  <img src="img/wallhaven-289grm_1600x900.png" style="width:100%">
 			</div>
 		</div>
-		<div class="carousel-btn prev" id="prev">
-			<img src="img/prev.svg" alt="">
-		</div>
-		<div class="carousel-btn next" id="next">
-			<img src="img/next.svg" alt="">
+		<div class="centered-on-img">
+			<div class="homepage-slogan">
+				<h1 class="title">HAPPY<br class="hideOnMobile">PET</h1>
+				<p>
+					Acá debería ir el slogan de la empresa o una frase que la identifique.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolores dignissimos eveniet vero itaque, accusamus distinctio consequatur autem labore eius ut est vitae, ea fugit aliquid iste dolorum sunt modi.
+				</p>
+			</div>
 		</div>
 	</div>
+  </div>
+  			<div class="services-container">
+				<h1>
+					¿Qué ofrecemos?
+				</h1>
+ 			 	<div class="services-grid">
+					<div class="grid-item">
+						<div class="service-container">
+							<div class="">
+								<img src="img/surgery-scalpel-icon.webp" alt="surgery-scalpel-icon">
+							</div>
+							<div class="service-text">
+								<h4>
+									Cirugía
+								</h4>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis perspiciatis ducimus temporibus ratione voluptatum pariatur.</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="service-container">
+							<div class="">
+								<img src="img/food-dinner-icon.webp" alt="surgery-scalpel-icon">
+							</div>
+							<div class="service-text">
+								<h4>
+									Alimentación
+								</h4>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis perspiciatis ducimus temporibus ratione voluptatum pariatur.</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="service-container">
+							<div class="">
+								<img src="img/bathtub-icon.webp" alt="surgery-scalpel-icon">
+							</div>
+							<div class="service-text">
+								<h4>
+									Baño
+								</h4>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis perspiciatis ducimus temporibus ratione voluptatum pariatur.</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="service-container">
+							<div class="">
+								<img src="img/hair-salon-icon.webp" alt="surgery-scalpel-icon">
+							</div>
+							<div class="service-text">
+								<h4>
+									Corte de Cabello Para tu Mascotas
+								</h4>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis perspiciatis ducimus temporibus ratione voluptatum pariatur.</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="service-container">
+							<div class="">
+								<img src="img/cosmetics-icon.webp" alt="surgery-scalpel-icon">
+							</div>
+							<div class="service-text">
+								<h4>
+									Productos Para el Cuidado de tu Mascota
+								</h4>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis perspiciatis ducimus temporibus ratione voluptatum pariatur.</p>
+							</div>
+						</div>
+					</div>
+					<div class="grid-item">
+						<div class="service-container">
+							<div class="">
+								<img src="img/surgery-scalpel-icon.webp" alt="surgery-scalpel-icon">
+							</div>
+							<div class="service-text">
+								<h4>
+									Cirugía
+								</h4>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis perspiciatis ducimus temporibus ratione voluptatum pariatur.</p>
+							</div>
+						</div>
+					</div>
+ 			 	</div>
+ 			 </div>
 
-
+	<footer>
+		<div class="footer-grid">
+			<div class="footer-grid-item">
+				<h1>LOCALES Y CONTACTO</h1>
+				<p>Av. Juan Tomis Stack 941, Chiclayo, Perú</p>
+				<p>987654321</p>
+				<p>074 654 3210</p>
+				<br>
+				<p>Av. Juan Tomis Stack 941, Chiclayo, Perú</p>
+				<p>987654321</p>
+				<p>074 654 3210</p>
+				<br>
+				<p>Av. Juan Tomis Stack 941, Chiclayo, Perú</p>
+				<p>987654321</p>
+				<p>074 654 3210</p>
+				<br>
+			</div>
+			<div class="footer-grid-item">
+				<h1>HORARIOS</h1>
+				<p>Sede1</p>
+				<p>Horario1</p>
+				<br>
+				<p>Sede1</p>
+				<p>Horario1</p>
+				<br>
+				<p>Sede1</p>
+				<p>Horario1</p>
+				<br>
+			</div>
+			<div class="footer-grid-item">
+				<img src="img/happypet-logo.jpg" alt="">
+			</div>
+		</div>
+	</footer>
 </body>
 
-<script src="js/scripts.js"></script>
-
+<script src="scripts.js"></script>
 </html>
