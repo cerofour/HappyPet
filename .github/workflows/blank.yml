@@ -13,20 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install lftp
-        run: sudo apt install lftp
-      - name: ftp-upload-action
-        uses: GenieTim/ftp-action@v4.0.1
-        with:
-          # FTP host
-          host: ${{ secrets.FTP_SERVER }}
-          # FTP user
-          user: ${{ secrets.FTP_USERNAME }}
-          # FTP password
-          password: ${{ secrets.FTP_PASSWORD }}
-          # Force SSL encryption
-          forceSsl: true
-          # Local directory
-          localDir: "www"
-          # Remote directory
-          remoteDir: "public_html"
+      - name: Mirror files with lftp
+        run:
+          lftp ${{ secrets.FTP_SERVER }} -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -e "
+          set net:timeout 60;
+          set net:max-retries 20;
+          set net:reconnect-interval-multiplier 2;
+          set net:reconnect-interval-base 5;
+          set ftp:ssl-force true;
+          set sftp:auto-confirm yes;
+          set ssl:verify-certificate true;
+          mirror -v -P 5 -R -n -L -x ^\.git/$ www public_html;
+          quit
+          "
