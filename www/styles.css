@@ -189,6 +189,7 @@ body {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	align-items: center;
+	width: 90%;
 }
 
 .services-grid h4 {
