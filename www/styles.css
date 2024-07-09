@@ -297,6 +297,7 @@ footer {
 	grid-template-columns: auto auto auto;
 }
 
+
 @media(max-width: 1000px) {
 	.toleft-on-img {
 		width: 80%;
