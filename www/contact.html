@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/citas-style.css">
+  <title>Agendar Cita - HappyPet Chiclayo</title>
+</head>
+<body>
+  <nav class="main-nav-bar">
+    <ul>
+      <li class="first-nav-element">
+         <a href="index.html"> <img src="img/happypet-logo.png" alt="HappyPet Logo"></a>
+         <a href="index.html">CLÍNICA VETERINARIA<br>HAPPYPET CHICLAYO</a>
+      </li>
+      <li class="hideOnMobile"><a href="contact.html">CONTACTO</a></li>
+      <li class="hideOnMobile"><a href="sedes.html">UBÍCANOS</a></li>
+      <li class="hideOnMobile"><a href="about.html">NOSOTROS</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-container">
+    <h1 class="page-title">Agendar Cita</h1>
+    <div class="citas-container">
+      <form id="citaForm" class="cita-form">
+        <input type="hidden" id="citaId">
+        <div class="form-group">
+          <label for="nombreMascota">Nombre de la mascota:</label>
+          <input type="text" id="nombreMascota" required>
+        </div>
+        <div class="form-group">
+          <label for="tipoMascota">Tipo de mascota:</label>
+          <select id="tipoMascota" required>
+            <option value="">Seleccione...</option>
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" required>
+        </div>
+        <div class="form-group">
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" required>
+        </div>
+        <div class="form-group">
+          <label for="motivo">Motivo de la cita:</label>
+          <textarea id="motivo" required></textarea>
+        </div>
+        <button type="submit" id="submitBtn" class="submit-btn">Agendar Cita</button>
+      </form>
+    </div>
+    <div class="citas-list">
+      <h2>Citas Agendadas</h2>
+      <ul id="citasList"></ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-grid-item">
+        <h1>LOCALES Y CONTACTO</h1>
+        <p>Av. Juan Tomis Stack 941, Chiclayo, Perú</p>
+        <p>987654321</p>
+        <p>074 654 3210</p>
+      </div>
+      <div class="footer-grid-item">
+        <h1>HORARIOS</h1>
+        <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+        <p>Sábados: 9:00 AM - 2:00 PM</p>
+      </div>
+      <div class="footer-grid-item">
+        <img src="img/happypet-logo.png" alt="HappyPet Logo">
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>
