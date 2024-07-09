@@ -259,6 +259,21 @@ body {
 	margin: auto;
 }
 
+.card {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.card a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #343a40;
+}
+
+.card a:hover {
+	color: #2BB3ED;
+}
+
 .ourteam-header {
 	margin-top: 15px;
 }
