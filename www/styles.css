@@ -192,6 +192,14 @@ body {
 	width: 90%;
 }
 
+.sedes-grid {
+	margin: auto;
+	width: 90%;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	align-items: center;
+}
+
 .services-grid h4 {
 	font-size: 1.2em;
 	color: #2BB3ED;
@@ -327,6 +335,10 @@ footer {
 
   .services-grid {
 	grid-template-columns: auto auto;
+  }
+
+  .sedes-grid {
+	grid-template-columns: auto;
   }
 
   .footer-grid {
