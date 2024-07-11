@@ -11,6 +11,19 @@ body {
   font-family: 'Roboto';
 }
 
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenuButton {
+  display: none;
+  color: #ccc;
+  background: none;
+  cursor:pointer;
+  border:none;
+  filter: invert(54%) sepia(93%) saturate(921%) hue-rotate(165deg) brightness(99%) contrast(88%);
+}
+
 .main-nav-bar {
 	font-family: 'Oswald';
   height: 100px;
@@ -297,6 +310,61 @@ footer {
 	grid-template-columns: auto auto auto;
 }
 
+/* --- */
+
+/* Basic styles for the navigation bar */
+.main-nav-bar {
+  /*background: #333;*/
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.main-nav-bar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav-bar li {
+  margin-right: 20px;
+}
+
+.main-nav-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Full screen menu styles */
+.full-screen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-screen-menu ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-screen-menu li {
+  margin: 10px 0;
+}
+
+.full-screen-menu a {
+  font-size: 24px;
+}
+
+/* --- */
 
 @media(max-width: 1000px) {
 	.toleft-on-img {
@@ -313,6 +381,10 @@ footer {
 
   .hideOnMobile {
     display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
   }
 
   .img-container {
@@ -360,4 +432,10 @@ footer {
 	.services-grid {
 		grid-template-columns: auto;
 	}
+}
+
+@media(max-width: 385px) {
+  .website-name {
+    display: none;
+  }
 }
