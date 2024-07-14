@@ -1,6 +1,6 @@
-console.log('contact.js loaded');
 document.addEventListener('DOMContentLoaded', () => {
-    const citasList = document.getElementsByClassName('citas-list')[0];
+  const citaForm = document.getElementById('citaForm');
+  const citasList = document.getElementsByClassName('citas-list')[0];
   
     function renderCitas(citas) {
       citasList.innerHTML = '';
@@ -25,7 +25,42 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error al obtener citas:', error);
       }
     }
+
+    if(!(citaForm === null)){
+      citaForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const citaId = document.getElementById('citaId').value;
+        const cita = {
+          nombreMascota: document.getElementById('nombreMascota').value,
+          tipoMascota: document.getElementById('tipoMascota').value,
+          fecha: document.getElementById('fecha').value,
+          hora: document.getElementById('hora').value,
+          motivo: document.getElementById('motivo').value
+        };
   
+        try {
+          if (citaId) {
+            await fetch(`api.php/citas/${citaId}`, {
+              method: 'PUT',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(cita)
+            });
+          } else {
+            await fetch('api.php/citas', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(cita)
+            });
+          }
+          citaForm.reset();
+          document.getElementById('citaId').value = '';
+          getCitas();
+        } catch (error) {
+          console.error('Error al guardar cita:', error);
+        }
+      });
+    }
+    
     window.eliminarCita = async (id) => {
       if (confirm('¿Estás seguro de que quieres eliminar esta cita?')) {
         try {

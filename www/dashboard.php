@@ -27,6 +27,7 @@ if (!isset($_SESSION['user_id'])) {
     </nav>
 
     <div class="dashboard-container">
+		<br>
         <h1 style="text-align: center">Panel de Control</h1>
         <h2 style="text-align: center">Citas Agendadas</h2>
         <ul class="citas-list"></ul>
