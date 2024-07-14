@@ -31,3 +31,4 @@ document.addEventListener('DOMContentLoaded', () => {
         link.style.display = (link.style.display == 'block') ? 'none' : 'block';
     });
 });
+

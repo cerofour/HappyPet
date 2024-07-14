@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.main-nav-bar {
+  font-family: 'Oswald', sans-serif;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.main-nav-bar ul {
+  width: 1200px;
+  padding: 20px 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav-bar ul li img {
+  width: 100px;
+}
+
+.main-nav-bar ul li a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+  text-decoration: none;
+}
+
+.first-nav-element {
+  display: flex;
+  align-items: center;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: #2BB3ED;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #343a40;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2BB3ED;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: #26a1d5;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #26a1d5;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-grid-item h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}

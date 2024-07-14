@@ -101,6 +101,25 @@
   .citas-list li button:hover {
     background-color: #26a1d5;
   }
+
+  .styled-button {
+    background-color: #4CAF50; /* Cambia este color según el estilo de tu página */
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px; /* Ajusta el radio del borde según tu preferencia */
+  }
+
+.styled-button:hover {
+    background-color: #45a049; /* Cambia el color del hover según el estilo de tu página */
+}
+
   
   @media (max-width: 768px) {
     .citas-container,
