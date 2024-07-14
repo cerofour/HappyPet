@@ -107,14 +107,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
         </form>
     </div>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-grid-item">
-                <h1>LOCALES Y CONTACTO</h1>
-                <p>Av. Juan Tomis Stack 941, Chiclayo, Perú</p>
-                <p>987654321</p>
-            </div>
-        </div>
-    </footer>
+<footer>
+		<div class="footer-grid">
+			<div class="footer-grid-item">
+				<h1>LOCALES Y CONTACTO</h1>
+				<p>Av. Juan Tomis Stack 941, Chiclayo, Perú</p>
+				<p>987654321</p>
+				<p>074 654 3210</p>
+				<br>
+				<p>Av. Pacífico 171, Chiclayo, Perú</p>
+				<p>987654321</p>
+				<p>074 654 3210</p>
+				<br>
+				<p>Av. Panamericana Norte, Chiclayo, Perú</p>
+				<p>987654321</p>
+				<p>074 654 3210</p>
+				<br>
+				</div>
+			<div class="footer-grid-item">
+				<h1>HORARIOS</h1>
+				<p>HappyPet Av Juan Tomis</p>
+				<p>09:00am - 08:00pm</p>
+				<br>
+				<p>HappyPet Urb Miraflores</p>
+				<p>09:00am - 08:00pm</p>
+				<br>
+				<p>HappyPet Coquetos</p>
+				<p>09:00am - 08:00pm</p>
+				<br>
+			</div>
+		<div class="footer-grid-item">
+			<img src="img/happypet-logo.png" alt="">
+		</div>
+		</div>
+	</footer>
 </body>
 </html>
